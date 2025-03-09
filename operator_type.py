@@ -25,6 +25,8 @@ print(a % b) # 1 (Reminder)
 print(a ** b) # a^b ==> 10^3 ==> 10 * 10 * 10 ==> 1000
 
 
+
+
 # Relational Operator (Compare value)
 # ==, !=, >, <, >=, <=
 x = 50
@@ -40,4 +42,7 @@ print(len(str1) == len(str2))
 print(int(str1) == 123)
 print(True == True)
 print(False == False)
+
+
+
 
