@@ -24,9 +24,6 @@ print(a % b) # 1 (Reminder)
 # ** (pow) (Exponentation)
 print(a ** b) # a^b ==> 10^3 ==> 10 * 10 * 10 ==> 1000
 
-
-
-
 # Relational Operator (Compare value)
 # ==, !=, >, <, >=, <=
 x = 50
@@ -43,6 +40,30 @@ print(int(str1) == 123)
 print(True == True)
 print(False == False)
 
+# != (Not equal to)
+print(10.5 != 20.5) # True
+print("Aryan" != "Aryan") # False
+print(True != True) # False
+print(True != False) # True
 
+# > (Always used with number values)
 
+age = 10
+print(age > 5) # True
+print(age > 10) # False
+print(age > 50) # False
+print(10.5 > 5.5) # True
 
+# < (Always used with number values)
+age = 20
+print(age < 30) # True
+print(age < 20) # False
+print(age < 5) # False
+
+# >= (Always used with number values)
+age = 10
+print(age >= 10) # True
+
+# <= (Always used with number values)
+age = 20
+print(age <= 20) # True
