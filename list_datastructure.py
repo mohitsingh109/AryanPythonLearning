@@ -11,18 +11,30 @@ print(students[0])
 # Print mohit
 print(students[-2])
 
+students[-2] = "Hack"
+
+print(students)
+
 # Add Bob
 students.append("Bob")
 
 # Remove karan
 students.remove("Karan")
 
+print("Before delete", students)
+
+# delete by index we use del keyword of python
+del students[1]
+
+print("After delete", students)
+
 print(len(students))
 
 # List Slicing & Iteration
 team_member = ["John", "Emma", "Ryan", "Sophia", "Unknown"]
 
-print(team_member[1:3]) # "Emma", "Ryan"
+print(team_member[1:5:2]) # "Emma", "Ryan"
+print(team_member[::3])
 print(team_member[1:])  # "Emma", "Ryan", "Sophia"
 print(team_member[:3])  # "John", "Emma", "Ryan"
 print(team_member[:-1]) # "John", "Emma", "Ryan"
