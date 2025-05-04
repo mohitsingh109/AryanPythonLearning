@@ -7,6 +7,12 @@
 # Reuse it easily
 # Make it easy to understand
 
+# Opps Concept:
+# 1) Class & Object
+# 2) Inheritance
+# 3) Polymorphism
+# 4) Abstraction
+
 # Let's talk about student
 
 # Class: We call it as a blueprint (we define what all things student should have & it's operation)
