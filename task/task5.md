@@ -70,7 +70,62 @@ Balance: ₹1365.00
 Interest Rate: 5.0%
 ```
 
+
 ---
 
-💡 *Bonus:* Try creating another class `CurrentAccount` with different rules like no interest but service fee!
+## 🧩 Part 3: Transaction History 📜
+
+Enhance your `BankAccount` class to **track the history of all transactions**.
+
+### 🔸 What to do:
+- Add a list called `transactions` in the constructor.
+- Every time `deposit()` or `withdraw()` is called, **append a message** to this list like:
+  - `"Deposited ₹500"`
+  - `"Withdrew ₹200"`
+- Add a method `show_transactions()` that prints each transaction on a new line.
+
+### 🧪 Example:
+
+```
+Transaction History:
+Deposited ₹500
+Withdrew ₹200
+Interest ₹50.0 added
+```
+
+---
+
+## 🧩 Part 4: Minimum Balance Rule 🚫
+
+Update your `SavingsAccount` to **enforce a minimum balance rule**.
+
+### 🔸 What to do:
+- Set a `minimum_balance` attribute (e.g., ₹100).
+- In `withdraw()`, check if the balance **after withdrawal** will go **below the minimum**.
+- If yes, print a warning: `"Cannot withdraw. Balance would fall below minimum required ₹100."`
+
+---
+
+## 🧩 Part 5: Create Multiple Accounts & Summary 📊
+
+Let the user create **multiple savings accounts** and get a report.
+
+### 🔸 What to do:
+- Create a list of 3 `SavingsAccount` objects.
+- For each account, perform a few deposits, withdrawals, and interest additions.
+- Add a function outside the class to:
+  - Print a summary of all accounts:
+    - Account Holder
+    - Final Balance
+    - Number of transactions
+
+### 📌 Sample Output
+
+```
+Account Summary:
+Riya - ₹1365.0 - 4 transactions
+Aman - ₹980.0 - 3 transactions
+Sneha - ₹1200.0 - 5 transactions
+```
+
 
