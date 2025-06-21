@@ -6,6 +6,11 @@ marks = {
     123: [82, 90, 85]
 }
 
+def calculate_average_total(scores):
+    total = sum(scores)
+    average = total / len(scores)
+    return average, total
+
 for student in students:
     name = student[0]
     roll_number = student[1]
@@ -16,6 +21,28 @@ for student in students:
 for student in students:
     roll_number = student[1]
     student_scores = marks[roll_number]
-    total = sum(student_scores)
-    average = total/len(student_scores)
+    average, total = calculate_average_total(student_scores)
     print(f"{student[0]} scored {total} in total. They scored {average:.2f} on average.")
+
+def search():
+    roll_num = int(input("What is the roll number of the person you are looking for? "))
+    for student in students:
+        if student[1] == roll_num:
+            print(student[0])
+            print(student[2])
+            student_marks = marks[roll_num]
+            print(student_marks)
+            average, _ = calculate_average_total(student_marks)
+            print(f"{average:.2f}")
+# search()
+
+def topper_finder():
+    avg_scores = []
+    for student in students:
+        average, _ = calculate_average_total(marks[student[1]])
+        avg_scores.append(average)
+    for i in range(len(avg_scores) - i - 1):
+        if avg_scores[i] > avg_scores[i + 1]:
+            print("libidy")
+topper_finder()
+number_list = [97,79,88,88,100,101,102,99,98,96,95,94,93,92,91]
