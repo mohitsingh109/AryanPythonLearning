@@ -34,26 +34,26 @@ def search():
             print(student_marks)
             average, _ = calculate_average_total(student_marks)
             print(f"{average:.2f}")
-# search()
 
 def topper_finder():
     avg_scores = []
     for student in students:
         average, _ = calculate_average_total(marks[student[1]])
         avg_scores.append(average)
-    # for i in range(len(avg_scores)):
-    #     if avg_scores[i] > avg_scores[i + 1]:
-    #         print("libidy")
-topper_finder()
+    ti = 0
+    tv = avg_scores[0]
+    for i in range(1, len(avg_scores)):
+        if avg_scores[i] > tv:
+            tv = avg_scores[i]
+            ti = i
+    name_of_student = students[ti][0]
+    print(f"{name_of_student} scored the highest average grade at {tv:.0f} percent.")
 
-
-number_list = [97, 79, 88, 87, 100, 10, 99]
-
-b = number_list[0]
-index = 0
-for i in range(1, len(number_list)):
-    if number_list[i] > b:
-        b = number_list[i]
-        index = i
-
-print(b, index)
+def class_search():
+    search_holder = {}
+    class_name = input("What class are you searching for?")
+    for student in students:
+        if student[2] == class_name:
+            search_holder[student[0]] = marks[student[1]]
+    print(search_holder)
+class_search()
