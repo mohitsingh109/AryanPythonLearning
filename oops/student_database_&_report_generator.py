@@ -41,8 +41,19 @@ def topper_finder():
     for student in students:
         average, _ = calculate_average_total(marks[student[1]])
         avg_scores.append(average)
-    for i in range(len(avg_scores) - i - 1):
-        if avg_scores[i] > avg_scores[i + 1]:
-            print("libidy")
+    # for i in range(len(avg_scores)):
+    #     if avg_scores[i] > avg_scores[i + 1]:
+    #         print("libidy")
 topper_finder()
-number_list = [97,79,88,88,100,101,102,99,98,96,95,94,93,92,91]
+
+
+number_list = [97, 79, 88, 87, 100, 10, 99]
+
+b = number_list[0]
+index = 0
+for i in range(1, len(number_list)):
+    if number_list[i] > b:
+        b = number_list[i]
+        index = i
+
+print(b, index)
