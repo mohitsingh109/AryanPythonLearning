@@ -36,6 +36,7 @@ account1.print_details()
 account1.set_name("Mohit")
 
 account1.print_details()
+account1.get_balance()
 
 hack_me(account1)
 
