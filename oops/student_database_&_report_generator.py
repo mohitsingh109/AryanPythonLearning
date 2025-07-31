@@ -56,4 +56,25 @@ def class_search():
         if student[2] == class_name:
             search_holder[student[0]] = marks[student[1]]
     print(search_holder)
-class_search()
+
+def dict_creation():
+    dict_of_students = {}
+    for student in students:
+        dict_of_students[student[0]] = sum(marks[student[1]])
+    print(dict_of_students)
+
+def sort_by_scores(dict_of_students):
+    list_of_lower_students = []
+    student_name = "name"
+    student_marks = 90
+    for key, value in dict_of_students.items():
+        if value > student_marks:
+            student_name = key
+            student_marks = value
+        else:
+            list_of_lower_students.append([key, value])
+
+def save_to_file():
+    for student in students:
+        print(student)
+        

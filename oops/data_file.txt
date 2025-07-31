@@ -1,0 +1,6 @@
+Student Info: ('Aryan', 29, 'A+', (97, 98, 100, 102), 100) 
+Student Info: ('Arjun', 21, 'A+', (98, 89, 90, 100), 23) 
+Student Info: ('Xavier', 12, 'F-', (54, 89, 76, 45), 99) 
+Teacher Info: ('Mohit', 100, 'Programming') 
+Teacher Info: ('Mr. Patel', 23, 'Graphic Design') 
+Teacher Info: ('Mr. Jain', 99, 'Programming') 
