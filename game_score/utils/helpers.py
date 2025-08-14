@@ -7,4 +7,3 @@ def validation(score):
         return True
     return False
 
-#scoreboard but number is inputted, validate input too

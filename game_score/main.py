@@ -1,3 +1,4 @@
+from game_score.models import player
 from models.player import Player
 from models.scoreboard import ScoreBoard
 
@@ -18,11 +19,18 @@ def player_creation():
     username = input("What is the username of the player? ")
     score = int(input("What is the score of the player? "))
     player = Player(username, score)
-    scoreboard.add_player(player)
+    try:
+        scoreboard.add_player(player)
+    except ValueError as e:
+        print(e)
+
 
 def player_removal():
     username = input("Who do you wnt to remove? ")
-    scoreboard.remove_player(username)
+    try:
+        scoreboard.remove_player(username)
+    except ValueError as e:
+        print(e)
 
 def update_score():
     username = input("Who do you want to update? ")

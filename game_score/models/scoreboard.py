@@ -6,12 +6,16 @@ class ScoreBoard:
 
     def add_player(self, new_player):
         if validation(new_player.get_score()):
+            if self.search_username(new_player.get_username()):
+                raise ValueError("Username already taken")
             self.__players.append(new_player)
         else:
             print("Invalid!")
 
     def remove_player(self, username):
         to_be_removed = self.search_username(username)
+        if not to_be_removed:
+            raise ValueError("Username not found")
         self.__players.remove(to_be_removed)
 
     def update_score(self, username, new_score):
