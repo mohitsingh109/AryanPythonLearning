@@ -14,6 +14,6 @@ class Player:
         self.__score = new_score
 
     def __str__(self):
-        print(f"Score: {self.get_score()} | Username: {self.get_username()}")
+        return f"Score: {self.get_score()} | Username: {self.get_username()}"
 
 

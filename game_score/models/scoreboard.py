@@ -1,4 +1,4 @@
-from ..utils.helpers import sort_players, validation
+from game_score.utils.helpers import sort_players, validation
 
 class ScoreBoard:
     def __init__(self):
@@ -28,6 +28,15 @@ class ScoreBoard:
         return None
 
     def show_top_10(self):
-        sorted_players = sort_players(self.__players)
-        for i in range(min(10, len(sorted_players))):
-            print(sorted_players[i])
+        self.show_top_inputted_players(10)
+
+    def show_top_inputted_players(self, num):
+        if validation(num):
+            sorted_players = sort_players(self.__players)
+            for i in range(min(num, len(sorted_players))):
+                print(sorted_players[i])
+        else:
+            print("Invalid scoreboard num.")
+
+    def get_players(self):
+        return self.__players

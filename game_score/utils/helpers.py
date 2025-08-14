@@ -2,7 +2,9 @@ def sort_players(players):
     sorted_player_scores = sorted(players, key=lambda player: player.get_score(), reverse=True)
     return sorted_player_scores
 
-def validation(player):
-    if isinstance(player.get_score(), int) and player.get_score() >= 0:
+def validation(score):
+    if isinstance(score, int) and score >= 0:
         return True
     return False
+
+#scoreboard but number is inputted, validate input too
