@@ -1,3 +1,4 @@
+from game_score.exceptions.exceptions import UsernameNotFoundError, UsernameAlreadyExistError
 from game_score.utils.helpers import sort_players, validation
 
 class ScoreBoard:
@@ -7,7 +8,7 @@ class ScoreBoard:
     def add_player(self, new_player):
         if validation(new_player.get_score()):
             if self.search_username(new_player.get_username()):
-                raise ValueError("Username already taken")
+                raise UsernameAlreadyExistError(new_player.get_username())
             self.__players.append(new_player)
         else:
             print("Invalid!")
@@ -15,7 +16,7 @@ class ScoreBoard:
     def remove_player(self, username):
         to_be_removed = self.search_username(username)
         if not to_be_removed:
-            raise ValueError("Username not found")
+            raise UsernameNotFoundError(username)
         self.__players.remove(to_be_removed)
 
     def update_score(self, username, new_score):

@@ -51,3 +51,17 @@
 
 
 # Define Custom Exception
+class InvalidAgeError(Exception):
+    def __init__(self, age):
+        super().__init__(f"Age {age} is not a valid value")
+
+def check_age(age):
+    if age < 0:
+        raise InvalidAgeError(age)
+    elif age > 18:
+        raise InvalidAgeError(age)
+
+try:
+    check_age(-5)
+except InvalidAgeError as e:
+    print("Error: ", e)
