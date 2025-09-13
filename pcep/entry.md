@@ -59,16 +59,3 @@ Input/Output (`print`, `input`), type casting
         delegation
 
 ------------------------------------------------------------------------
-
-## 📅 Suggested Preparation Plan
-
--   **Week 1-2:** Python basics -- syntax, operators, literals, I/O
--   **Week 3:** Control Flow -- if, loops, nested logic
--   **Week 4:** Data Collections -- practice lists, tuples,
-    dictionaries, strings
--   **Week 5:** Functions -- defining, recursion, parameters, scope
--   **Week 6:** Exceptions (PCEP-30-02 only) -- hierarchy & handling
--   **Week 7:** Full-length practice tests & review weak areas
-
-------------------------------------------------------------------------
-
